@@ -1,0 +1,30 @@
+Headline:
+  Hello world, I'm Brandon Melendez
+  I'm a full-stack web developer with an eye for modern design
+
+Bio:
+  I am a web developer with a background that is both technical and creative. I am passionate about story-telling and developing the best user experience. I believe technology is the key to solving many of the world's problems, both big and small, so there is no challenge I won't take on. At my core I am lover of puzzles, human or mathematic, and I want to help you so you can help make the world a better place. Let's build something together!
+
+Projects:
+  Project title
+  Project description (keep it to one paragraph)
+  List of technologies used
+  Link to live app
+  Link to repo
+
+  TITLE: JAVASCRIPT ALGORITHM QUIZ app
+  DESC: Quiz app designed to test beginner developers on their knowledge of vanilla javascript. They are asked questions about functions, time complexity, regex, and more. 
+  Technologies: HTML, CSS, jQuery, javascript
+  Link to live app: https://uncultivatedrabbit.github.io/quiz-app/
+  Link to repo: https://github.com/uncultivatedrabbit/quiz-app
+
+  TITLE: AFFIRMATION TWITTER BOT 
+  DESC: Why not try to bring a little joy into people's lives while coding? I built an autonomous twitter bot that tweets out different affirming things every day.
+  Technologies: Node.js
+  Link to live app: https://twitter.com/iamgladyouexist
+  Link to repo: https://github.com/uncultivatedrabbit/twitter_bot
+
+  TITLE: Tinderbox Poetry Journal
+  DESC: A Poetry Journal Website dedicated to diverse and underrepresented voices, with the guidance of the Editor in Chief I reimagined many of the features and the look of the website, making it more modern and mobile friendly.
+  Technologies: CSS, Javascript, PHP 
+  Link to live app: Tinderboxpoetryjournal.com
