@@ -1,0 +1,89 @@
+/*
+---------------------------- GLOBAL-----------------------
+*/
+
+:root {
+  --main-black: #040303;
+  --main-purple: #2c2259;
+  --main-white: #ffffff;
+  --main-grey: #2a2d34;
+  --main-blue: #03256c;
+  --main-red: #cc2936;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abel", sans-serif;
+}
+
+/*
+---------------------------- LANDING PAGE-----------------------
+*/
+
+#home-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.canvas{
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+
+/*
+---------------------------- NAVBAR -----------------------
+*/
+
+#navbar{
+  height: 10vh;
+  background: grey;
+}
+
+/*
+---------------------------- MAIN SECTION -----------------------
+*/
+
+#bio{
+  height: 50vh;
+}
+
+#projects{
+  height: 70vh;
+  background: grey;
+}
+
+/*
+---------------------------- FOOTER -----------------------
+*/
+
+#footer{
+  height: 15vh;
+  background: white;
+}
+
+/*
+---------------------------- MEDIA QUERIES  -----------------------
+*/
