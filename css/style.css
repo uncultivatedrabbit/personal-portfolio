@@ -4,11 +4,12 @@
 
 :root {
   --main-black: #040303;
-  --main-purple: #2c2259;
-  --main-white: #ffffff;
-  --main-grey: #2a2d34;
-  --main-blue: #03256c;
-  --main-red: #cc2936;
+  --main-white: #d2dae2;
+  --main-grey: #1d1d1d;
+  --main-blue: #3c40c6;
+  --main-dark-blue: #1e272e;
+  --main-red: #f53b57;
+  --main-dark-grey: #181818;
 }
 
 * {
@@ -19,7 +20,10 @@
 body,
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: "Ubuntu", sans-serif;
+  background-color: var(--main-grey);
+  color: var(--main-white);
 }
 
 h1,
@@ -29,6 +33,11 @@ h4,
 h5,
 h6 {
   font-family: "Abel", sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  line-height: 1.8rem;
 }
 
 /*
@@ -45,7 +54,7 @@ h6 {
   text-align: center;
 }
 
-.canvas{
+.canvas {
   position: absolute;
   height: 100%;
   left: 0;
@@ -53,37 +62,159 @@ h6 {
   width: 100vw;
 }
 
+.full-name {
+  color: var(--main-red);
+}
+
+.headline {
+  margin: 10px 15px 15px 15px;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+.header-break {
+  width: 50px;
+  height: 2px;
+  background-color: var(--main-white);
+  margin: 0 auto;
+}
+
 /*
 ---------------------------- NAVBAR -----------------------
 */
 
-#navbar{
-  height: 10vh;
-  background: grey;
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--main-dark-grey);
+  border-bottom: 2px solid var(--main-blue);
 }
 
+.hamburger-menu {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamburger-menu.active {
+  transform: rotate(90deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: var(--main-white);
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.hamburger-menu .top {
+  stroke-dasharray: 40 172;
+}
+.hamburger-menu .middle {
+  stroke-dasharray: 40 111;
+}
+.hamburger-menu .bottom {
+  stroke-dasharray: 40 172;
+}
+.hamburger-menu.active .top {
+  stroke-dashoffset: -132px;
+}
+.hamburger-menu.active .middle {
+  stroke-dashoffset: -71px;
+}
+.hamburger-menu.active .bottom {
+  stroke-dashoffset: -132px;
+}
 /*
 ---------------------------- MAIN SECTION -----------------------
 */
-
-#bio{
-  height: 50vh;
+.section-header {
+  margin: 1em 1em 0.2em 1em;
+}
+#about,
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-grey);
+  color: var(--main-white)
 }
 
-#projects{
-  height: 70vh;
-  background: grey;
+.section-break {
+  width: 50px;
+  height: 2px;
+  background-color: var(--main-white);
+  margin: 0 auto;
 }
+
+/* ------------------ ABOUT ME --------------------- */
+
+
+.about-me-img {
+  text-align: center;
+}
+
+#main-img{
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+
+.main-para{
+  margin: 0 1.3em;
+}
+
+/* ------------------ PROJECTS --------------------- */
+
+#projects {
+ background: grey;
+}
+
+.project{
+  width: 100%;
+  height: 200px;
+  margin-top: 15px;
+}
+
+.project-1{
+  background-image: url("/images/quiz.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.project-info{
+  height: 100%;
+  width: 100%;
+  background: rgba(60, 64, 198, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* display:none; */
+}
+
+
 
 /*
 ---------------------------- FOOTER -----------------------
 */
 
-#footer{
+.social {
   height: 15vh;
-  background: white;
+  width: 100%;
+  display: flex;
 }
-
+.social-icons {
+  width: 100%;
+  display: flex;
+}
 /*
 ---------------------------- MEDIA QUERIES  -----------------------
 */
