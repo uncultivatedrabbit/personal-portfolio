@@ -1,3 +1,11 @@
+// further ideas:
+italic quotes
+sticky navbar
+icon to push user back to top of page
+
+
+
+
 Headline:
   Hello world, I'm Brandon Melendez
   I'm a full-stack web developer with an eye for modern design

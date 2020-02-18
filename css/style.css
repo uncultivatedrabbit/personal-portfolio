@@ -40,6 +40,15 @@ p {
   line-height: 1.8rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+.italic-header {
+  font-family: "Titillium Web", sans-serif;
+}
+
 /*
 ---------------------------- LANDING PAGE-----------------------
 */
@@ -60,6 +69,7 @@ p {
   left: 0;
   top: 0;
   width: 100vw;
+  z-index: -1;
 }
 
 .full-name {
@@ -80,16 +90,58 @@ h1 {
   margin: 0 auto;
 }
 
+.rotate{
+  transform: rotate(90deg);
+  transition-duration: 0.5s;
+}
+.rotate-back{
+  transform: rotate(0deg);
+  transition-duration: 0.5s;
+}
 /*
 ---------------------------- NAVBAR -----------------------
 */
 
 #navbar {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
   background: var(--main-dark-grey);
   border-bottom: 2px solid var(--main-blue);
+  overflow: hidden;
+  transition: height 1s;
+}
+
+.reduced {
+  height: 70px;
+}
+
+.expanded {
+  height: 170px;
+}
+
+.extended {
+  width: 100%;
+}
+.extended-mobile-menu {
+  margin-top: 1em;
+}
+
+.extended-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.large-menu {
+  display: none;
+}
+
+.mobile-menu {
+  margin-right: 1em;
 }
 
 .hamburger-menu {
@@ -130,11 +182,15 @@ h1 {
 .hamburger-menu.active .bottom {
   stroke-dashoffset: -132px;
 }
+
 /*
 ---------------------------- MAIN SECTION -----------------------
 */
+
 .section-header {
   margin: 1em 1em 0.2em 1em;
+  font-size: 1.8rem;
+  letter-spacing: 10px;
 }
 #about,
 #projects {
@@ -142,79 +198,294 @@ h1 {
   flex-direction: column;
   align-items: center;
   background-color: var(--main-grey);
-  color: var(--main-white)
+  color: var(--main-white);
 }
 
 .section-break {
   width: 50px;
   height: 2px;
   background-color: var(--main-white);
-  margin: 0 auto;
+  margin: 0 auto 2em auto;
 }
 
 /* ------------------ ABOUT ME --------------------- */
-
 
 .about-me-img {
   text-align: center;
 }
 
-#main-img{
+#main-img {
   width: 70%;
   height: auto;
   display: block;
   margin: 1em auto;
 }
 
-
-.main-para{
+.main-para {
   margin: 0 1.3em;
 }
 
 /* ------------------ PROJECTS --------------------- */
 
 #projects {
- background: grey;
+  background: var(--main-grey);
+  margin: 20px 0 50px 0;
 }
 
-.project{
+.project {
   width: 100%;
-  height: 200px;
-  margin-top: 15px;
+  height: 100%;
+  margin: 1em 0 4em 0;
 }
 
-.project-1{
-  background-image: url("/images/quiz.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.project-info{
+.project-info {
   height: 100%;
   width: 100%;
-  background: rgba(60, 64, 198, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* display:none; */
 }
 
+.project-img {
+  width: 100%;
+  height: auto;
+}
 
+.project-title {
+  padding-bottom: 0.5em;
+}
 
+.project-subtitle {
+  margin-top: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.project-tile {
+  position: relative;
+}
+
+.project-overlay {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  bottom: 0.4%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: height 1s;
+  overflow: hidden;
+}
+.overlay-even {
+  background-color: rgba(60, 65, 198, 0.706);
+}
+.overlay-odd {
+  background-color: rgb(245, 59, 87, 0.7);
+}
+
+.overlay-para {
+  font-size: 11px;
+}
+.overlay-para,
+.overlay-btn {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.html {
+  background-color: #e85d25;
+}
+.pill {
+  color: var(--main-white);
+  padding: 3px 7px 3px 7px;
+  border-radius: 10px;
+  margin: 2px;
+}
+.css {
+  background-color: rgb(36, 157, 219);
+}
+.javascript {
+  background-color: rgb(229, 162, 41);
+}
+.react {
+  color: rgb(97, 218, 251);
+}
+.react i {
+  animation: rotation 10s infinite linear;
+}
+.node {
+  background-color: rgb(135, 192, 0);
+}
+.wordpress {
+  background-color: rgb(32, 114, 151);
+}
+.php {
+  background-color: rgb(84, 99, 146);
+}
 /*
 ---------------------------- FOOTER -----------------------
 */
-
+#footer {
+  border-top: 2px solid var(--main-blue);
+  background-color: var(--main-dark-grey);
+  font-family: "Abel", sans-serif;
+}
 .social {
-  height: 15vh;
+  height: 20vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .social-icons {
+  height: 100%;
   width: 100%;
   display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.footer-icon {
+  margin: 0 auto;
+  border: 1px solid var(--main-grey);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email {
+  padding: 1em;
+  color: var(--main-white);
+}
+
+small {
+  color: #d2dae271;
+  margin-top: 2em;
+}
+small:hover {
+  cursor: default;
+}
+
+#footer i {
+  font-size: 1.5rem;
 }
 /*
 ---------------------------- MEDIA QUERIES  -----------------------
 */
+
+@media screen and (min-width: 700px) {
+  .biography {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .paragraph-cluster {
+    margin: auto;
+  }
+  .main-para {
+    font-size: 1.3rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .overlay-para {
+    margin: 0 10em;
+  }
+  .section-header {
+    font-size: 2.3rem;
+  }
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  #footer i {
+    font-size: 2.2rem;
+  }
+  .email h6 {
+    font-size: 1.5rem;
+  }
+  small {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #about,
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  .main-para {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+  .section-header {
+    font-size: 2.8rem;
+  }
+  .project-title {
+    font-size: 2rem;
+  }
+  .project {
+    width: 90%;
+  }
+  /* .project-overlay{
+    height: 49.5%;
+  } */
+  .overlay-para {
+    font-size: 1.3rem;
+  }
+  .pill {
+    border-radius: 15px;
+    margin: 5px;
+  }
+  h6 {
+    font-size: 1.1rem;
+  }
+  #footer i {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .email h6 {
+    font-size: 1.6rem;
+  }
+  small {
+    font-size: 1.3rem;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .extended {
+    display: none;
+  }
+  .large-menu {
+    display: block;
+  }
+  .navbar-large {
+    display: flex;
+    align-items: center;
+    padding: 1.3em;
+    width: 100vw;
+    justify-content: flex-end;
+    list-style: none;
+  }
+  .nav-item {
+    padding-left: 2.2em;
+    font-size: 1.4rem;
+  }
+  .social-icons {
+    margin-bottom: 1.7em;
+  }
+  #footer {
+    height: 30vh;
+  }
+}
