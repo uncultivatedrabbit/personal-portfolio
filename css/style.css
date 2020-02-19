@@ -444,19 +444,22 @@ nav a:hover,
 
 
 .html {
-  background-color: #e85d25;
+  color: #e85d25;
+  border: 1px solid #e85d25;
 }
 .pill {
-  color: white;
+  background-color: var(--main-dark-grey);
   padding: 3px 7px 3px 7px;
   border-radius: 10px;
   margin: 2px;
 }
 .css {
-  background-color: rgb(36, 157, 219);
+  color: rgb(36, 157, 219);
+  border: 1px solid rgb(36, 157, 219);
 }
 .javascript {
-  background-color: rgb(229, 162, 41);
+  color: rgb(229, 162, 41);
+  border: 1px solid rgb(229, 162, 41);
 }
 .react {
   color: rgb(97, 218, 251);
@@ -465,13 +468,16 @@ nav a:hover,
   animation: rotation 10s infinite linear;
 }
 .node {
-  background-color: rgb(135, 192, 0);
+  color: rgb(135, 192, 0);
+  border: 1px solid rgb(135, 192, 0);
 }
 .wordpress {
-  background-color: rgb(32, 114, 151);
+  color: rgb(32, 114, 151);
+  border: 1px solid rgb(32, 114, 151);
 }
 .php {
-  background-color: rgb(84, 99, 146);
+  color: rgb(84, 99, 146);
+  border: 1px solid rgb(84, 99, 146);
 }
 /*
 ---------------------------- FOOTER -----------------------
