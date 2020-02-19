@@ -1,19 +1,6 @@
-todo:
-
-5) make canvas animation
-6) add technologies to about me
-
-9) add "back to top" button
-
-
------------- additional -------
+Final todo
 
 1) navbar ONLY on scroll up
-
-
-  TITLE: AFFIRMATION TWITTER BOT 
-  DESC: Why not try to bring a little joy into people's lives while coding? I built an autonomous twitter bot that tweets out different affirming things every day.
-  Technologies: Node.js
-  Link to live app: https://twitter.com/iamgladyouexist
-  Link to repo: https://github.com/uncultivatedrabbit/twitter_bot
-
+2) move info about projects outside hover
+3) add button for repo
+4) add "team" to about me

@@ -146,6 +146,7 @@ h1 {
 
 nav a:active,
 nav a:hover,
+.book-link,
 .active {
   color: var(--main-red);
 }
