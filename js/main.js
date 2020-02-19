@@ -22,6 +22,12 @@ function toggleNavExpansion() {
       $("#navbar").addClass("reduced");
     }
   });
+
+  $('.extended-list-item').click(e => {
+    $("#navbar").removeClass("expanded");
+    $("#navbar").addClass("reduced");
+    $('.hamburger-menu').removeClass('active')
+  })
 }
 
 // adds active class to large navbar to change the color of each link
@@ -42,6 +48,7 @@ function makeNavbarSticky() {
       : $("#navbar").removeClass("navbar-sticky");
   });
 }
+
 
 
 function loadJavascript() {

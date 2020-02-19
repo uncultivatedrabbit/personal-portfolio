@@ -3,3 +3,12 @@ Final todo
 1) navbar ONLY on scroll up
 2) add back to top button on footer
 3) add quotes and style bio more
+
+
+❌ Required changes to pass the assignment
+
+
+
+Some of your text lacks contrast with the background. You can use the WAVE Accessibility Tool to see the errors.
+
+

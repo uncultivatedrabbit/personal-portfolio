@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <script
       src="https://kit.fontawesome.com/09e706ee12.js"
       crossorigin="anonymous"
@@ -62,9 +62,9 @@
           </span>
         </h1>
         <hr class="header-break" />
-        <h3 class="headline">
+        <h2 class="headline">
           A full-stack web developer with an eye for modern design
-        </h3>
+        </h2>
         <a href="#about" class="btn slide more-btn"
           >Find out more <i id="arrow" class="fas fa-arrow-right"></i
         ></a>
@@ -101,7 +101,7 @@
               <li class="extended-list-item">
                 <a href="#projects">PROJECTS</a>
               </li>
-              <li class="extended-list-item"><a href="#footer">CONTACTS</a></li>
+              <li class="extended-list-item"><a href="#footer">CONTACT</a></li>
             </ul>
           </div>
         </div>
@@ -112,7 +112,7 @@
             </li>
             <li class="nav-item"><a href="#about">ABOUT</a></li>
             <li class="nav-item"><a href="#projects">PROJECTS</a></li>
-            <li class="nav-item"><a href="#footer">CONTACTS</a></li>
+            <li class="nav-item"><a href="#footer">CONTACT</a></li>
           </ul>
         </div>
       </nav>
@@ -125,7 +125,7 @@
               id="main-img"
               src="images/brandon-smiling.jpg"
               alt="brandon melendez smiling"
-              loading="lazy"
+              loading=lazy
             />
           </div>
           <div class="paragraph-cluster">
@@ -179,7 +179,7 @@
         </div>
       </section>
       <section id="projects">
-        <h2 class="section-header">PROJECTS</h2>
+        <h2 id="project-title" class="section-header">PROJECTS</h2>
         <hr class="section-break" />
         <div class="project project-1">
           <div class="project-container">
@@ -187,11 +187,17 @@
             <div class="project-tile">
               <div class="project-image">
                 <img
-                  class="project-img"
+                  class="project-img big-screen-img"
                   src="images/quiz.png"
                   alt="javascript algorithm quiz app screenshot"
-                  loading="lazy"
+                  loading=lazy
                 />
+                <img
+                class="project-img mobile-screen-img"
+                src="images/quiz-mobile.png"
+                alt="javascript algorithm quiz app screenshot"
+                loading=lazy
+              />
               </div>
               <div class="project-details">
                 <h6 class="italic-header project-subtitle">How Well Do You Know Your JavaScript?</h6>
@@ -222,10 +228,16 @@
             <div class="project-tile">
               <div class="project-image">
                 <img
-                  class="project-img"
+                  class="project-img big-screen-img"
                   src="images/tinderboxpoetryjournal.png"
                   alt="tinderbox poetry journal latest issue"
-                  loading="lazy"
+                  loading=lazy
+                />
+                <img
+                  class="project-img mobile-screen-img"
+                  src="images/tinderbox-mobile.jpg"
+                  alt="tinderbox poetry journal latest issue"
+                  loading=lazy
                 />
               </div>
               <div class="project-details">
@@ -264,6 +276,7 @@
             rel="noopener noreferrer"
           >
             <i class="fab fa-github icon-3d"></i>
+            <p class="footer-icon-text">Github</p>
           </a>
           <a
             class="footer-icon"
@@ -272,6 +285,7 @@
             rel="noopener noreferrer"
           >
             <i class="fab fa-twitter icon-3d"></i>
+            <p class="footer-icon-text">Twitter</p>
           </a>
           <a
             class="footer-icon"
@@ -280,12 +294,13 @@
             rel="noopener noreferrer"
           >
             <i class="fab fa-linkedin icon-3d"></i>
+            <p class="footer-icon-text">LinkedIn</p>
           </a>
         </div>
         <div class="email">
           <h6>
             contact:
-            <a href="mailto:brandonmelendezdev@gmail.com"
+            <a target="_blank" href="mailto:brandonmelendezdev@gmail.com"
               >brandonmelendezdev@gmail.com</a
             >
           </h6>
