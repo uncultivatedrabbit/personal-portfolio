@@ -10,17 +10,6 @@ function rotateArrowAnimation() {
   });
 }
 
-// allows user to see more details for each project on hovering over images
-function handleImageHover() {
-  $(".project-tile").on("mouseover", function(e) {
-    $(".project-overlay", this).css("height", "49%");
-    $(".overlay-btn, .overlay-para", this).css("opacity", "0.9");
-  });
-  $(".project-tile").on("mouseout", function(e) {
-    $(".project-overlay", this).css("height", "0%");
-    $(".overlay-btn, .overlay-para", this).css("opacity", "0");
-  });
-}
 
 // reduces or expanded hamburger menu
 function toggleNavExpansion() {
@@ -58,7 +47,6 @@ function makeNavbarSticky() {
 function loadJavascript() {
   console.log("javascript loaded...");
   rotateArrowAnimation();
-  handleImageHover();
   toggleNavExpansion();
   addActiveClass();
   makeNavbarSticky();

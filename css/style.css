@@ -62,10 +62,9 @@ a {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  
 }
 
-header{
+header {
   z-index: 1;
 }
 
@@ -119,15 +118,21 @@ h1 {
   box-shadow: inset 9em 0 0 0 var(--main-blue);
   border: 2px solid var(--main-blue);
 }
-.hover-letter{
-  transition: .4s;
+
+.slide-2:hover,
+.slide-2:focus {
+  box-shadow: inset 9em 0 0 0 var(--main-red);
+  border: 2px solid var(--main-red);
+}
+
+.hover-letter {
+  transition: 0.4s;
   display: inline;
 }
-.hover-letter:hover{
+.hover-letter:hover {
   color: var(--main-blue);
   cursor: pointer;
 }
-
 
 /*
 ---------------------------- NAVBAR -----------------------
@@ -149,6 +154,9 @@ nav a:hover,
 .book-link,
 .active {
   color: var(--main-red);
+}
+.book-link:hover{
+  color:var(--main-blue)
 }
 
 .reduced {
@@ -288,8 +296,8 @@ nav a:hover,
   text-align: left;
 }
 
-.graph-label{
-  background-color:#832f3c;
+.graph-label {
+  background-color: #832f3c;
   display: inline-block;
   height: 30px;
   width: 80px;
@@ -368,24 +376,29 @@ nav a:hover,
   margin: 1em 0 4em 0;
 }
 
-.project-info {
+.project-container {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.project-subtitle {
+  text-align: center;
+  margin: 8px 5px 8px 5px;
+}
 
 .project-img {
   width: 100%;
   height: auto;
+  display: relative;
 }
 
 .project-title {
   padding-bottom: 0.5em;
 }
 
-.project-subtitle {
+.project-techs {
   margin-top: 7px;
   display: flex;
   flex-wrap: wrap;
@@ -394,57 +407,33 @@ nav a:hover,
 }
 .project-tile {
   position: relative;
+  display: grid;
+  grid-template-columns: auto;
 }
 
-.project-overlay {
-  position: absolute;
-  height: 0%;
-  width: 100%;
-  bottom: 0%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.project-details{
   text-align: center;
-  transition: height 1s;
-  overflow: hidden;
-}
-.overlay-even {
-  background-color: rgba(60, 65, 198, 0.706);
 }
 
-.overlay-even .overlay-btn:hover,
-.overlay-even .overlay-btn:focus {
-  background-color: var(--main-white);
-  color: var(--main-blue);
-}
-.overlay-odd {
-  background-color: rgb(245, 59, 87, 0.7);
-}
-
-.overlay-odd .overlay-btn:hover,
-.overlay-odd .overlay-btn:focus {
-  background-color: var(--main-white);
-  color: var(--main-red);
+.project-description {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  width: 90%;
+  margin: auto;
 }
 
-.overlay-para {
-  font-size: 11px;
-  line-height: 1.3rem;
-  margin: 5px auto;
-}
-.overlay-para,
-.overlay-btn {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-.overlay-btn {
+.project-btn {
   display: inline-block;
-  margin-top: 1em;
+  margin: 1em;
   padding: 0.4em;
   font-size: 0.8rem;
   transition: 0.25s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
+
+
 .html {
   background-color: #e85d25;
 }
@@ -549,18 +538,21 @@ small:hover {
   .main-para {
     font-size: 1.3rem;
   }
-  .project-overlay {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .overlay-para {
+  .project-description {
     font-size: 1.3rem;
-    line-height: 1.7rem;
+    line-height: 2rem;
   }
-  .overlay-btn {
+  .project-subtitle {
+    font-size: 1.2rem;
+  }
+  .pill h6 {
+    font-size: 0.9rem;
+  }
+  .project-btn {
     padding: 0.5em;
-    font-size: 1.3rem;
-    margin-bottom: 0;
+    font-size: 1.1rem;
+    margin: 10px 10px 10px 0;
+    letter-spacing: 0.1em;
   }
   h1 {
     font-size: 3rem;
@@ -568,19 +560,16 @@ small:hover {
   h3 {
     font-size: 1.3rem;
   }
-  .overlay-para {
-    margin: 0 10em;
-  }
   .section-header {
     font-size: 2.3rem;
   }
   .project-title {
     font-size: 1.5rem;
   }
-  .graph-label{
+  .graph-label {
     width: 100px;
   }
-  .bar{
+  .bar {
     font-size: 16px;
   }
   #footer i {
@@ -596,9 +585,13 @@ small:hover {
 
 @media screen and (min-width: 1000px) {
   #about,
-  #projects,
   .technologies {
     max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #projects {
+    max-width: 1600px;
     margin: 0 auto;
   }
 
@@ -626,11 +619,31 @@ small:hover {
   .section-header {
     font-size: 2.8rem;
   }
-  .technologies{
+  .technologies {
     margin: 3em auto;
   }
   .project-title {
     font-size: 2rem;
+  }
+  .project-tile {
+    grid-template-columns: 1fr 1fr;
+  }
+  .project-details {
+    text-align: left;
+    margin: 0 0 0 2em;
+  }
+  .project-subtitle {
+    margin: 0.2em 0 0.4em 0;
+    text-align: left;
+  }
+  .project-description {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
+    margin: 0;
+  }
+  .project-techs {
+    justify-content: start;
   }
   .project {
     width: 90%;
@@ -641,6 +654,10 @@ small:hover {
   }
   h6 {
     font-size: 1.1rem;
+  }
+
+  .pill h6 {
+    font-size: 0.9rem;
   }
   #footer i {
     font-size: 3rem;
