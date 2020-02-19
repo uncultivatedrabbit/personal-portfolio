@@ -5,7 +5,7 @@
 :root {
   --main-black: #040303;
   --main-white: #d2dae2;
-  --main-grey: #1d1d1d;
+  --main-grey: rgb(29, 29, 29);
   --main-blue: #3c40c6;
   --main-dark-blue: #1e272e;
   --main-red: #f53b57;
@@ -43,6 +43,7 @@ p {
 a {
   text-decoration: none;
   color: var(--main-white);
+  transition: 0.5s;
 }
 
 .italic-header {
@@ -61,6 +62,11 @@ a {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  
+}
+
+header{
+  z-index: 1;
 }
 
 .canvas {
@@ -69,7 +75,7 @@ a {
   left: 0;
   top: 0;
   width: 100vw;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .full-name {
@@ -77,7 +83,7 @@ a {
 }
 
 .headline {
-  margin: 10px 15px 15px 15px;
+  margin: 10px 15px 35px 15px;
 }
 h1 {
   font-size: 2.5rem;
@@ -90,14 +96,39 @@ h1 {
   margin: 0 auto;
 }
 
-.rotate{
+.rotate {
   transform: rotate(90deg);
   transition-duration: 0.5s;
 }
-.rotate-back{
+.rotate-back {
   transform: rotate(0deg);
   transition-duration: 0.5s;
 }
+
+.btn {
+  border: 2px solid var(--main-white);
+  padding: 0.7em;
+  line-height: 1;
+  color: var(--main-white);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 9em 0 0 0 var(--main-blue);
+  border: 2px solid var(--main-blue);
+}
+.hover-letter{
+  transition: .4s;
+  display: inline;
+}
+.hover-letter:hover{
+  color: var(--main-blue);
+  cursor: pointer;
+}
+
+
 /*
 ---------------------------- NAVBAR -----------------------
 */
@@ -113,12 +144,18 @@ h1 {
   transition: height 1s;
 }
 
+nav a:active,
+nav a:hover,
+.active {
+  color: var(--main-red);
+}
+
 .reduced {
-  height: 70px;
+  height: 60px;
 }
 
 .expanded {
-  height: 170px;
+  height: 200px;
 }
 
 .extended {
@@ -134,6 +171,7 @@ h1 {
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  line-height: 1.7rem;
 }
 
 .large-menu {
@@ -142,6 +180,10 @@ h1 {
 
 .mobile-menu {
   margin-right: 1em;
+}
+.nav-item,
+.extended-list-item {
+  letter-spacing: 3px;
 }
 
 .hamburger-menu {
@@ -181,6 +223,12 @@ h1 {
 }
 .hamburger-menu.active .bottom {
   stroke-dashoffset: -132px;
+}
+
+.navbar-sticky {
+  top: 0;
+  position: fixed;
+  z-index: 100;
 }
 
 /*
@@ -223,6 +271,87 @@ h1 {
 
 .main-para {
   margin: 0 1.3em;
+}
+
+.technologies {
+  width: 60%;
+  text-align: center;
+  margin-top: 2em;
+}
+.graph-container {
+  width: calc(100% - 40px);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: sticky;
+  text-align: left;
+}
+
+.graph-label{
+  background-color:#832f3c;
+  display: inline-block;
+  height: 30px;
+  width: 80px;
+  margin-left: -10px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.bar {
+  height: 30px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  line-height: 30px;
+  font-size: 13px;
+  color: var(--main-white);
+  padding: 0 0 0 10px;
+  position: relative;
+}
+.bar::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 0;
+  z-index: -2;
+  background: var(--main-dark-grey);
+}
+.bar::after {
+  content: "";
+  background: var(--main-red);
+  height: 30px;
+  transition: 0.7s;
+  display: block;
+  width: 100%;
+  animation: bar-before 1 1.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.bar90::after {
+  max-width: 90%;
+}
+.bar80::after {
+  max-width: 80%;
+}
+.bar70::after {
+  max-width: 70%;
+}
+.bar60::after {
+  max-width: 60%;
+}
+.bar50::after {
+  max-width: 50%;
+}
+@keyframes bar-before {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /* ------------------ PROJECTS --------------------- */
@@ -268,9 +397,9 @@ h1 {
 
 .project-overlay {
   position: absolute;
-  height: 0;
+  height: 0%;
   width: 100%;
-  bottom: 0.4%;
+  bottom: 0%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -281,17 +410,39 @@ h1 {
 .overlay-even {
   background-color: rgba(60, 65, 198, 0.706);
 }
+
+.overlay-even .overlay-btn:hover,
+.overlay-even .overlay-btn:focus {
+  background-color: var(--main-white);
+  color: var(--main-blue);
+}
 .overlay-odd {
   background-color: rgb(245, 59, 87, 0.7);
 }
 
+.overlay-odd .overlay-btn:hover,
+.overlay-odd .overlay-btn:focus {
+  background-color: var(--main-white);
+  color: var(--main-red);
+}
+
 .overlay-para {
   font-size: 11px;
+  line-height: 1.3rem;
+  margin: 5px auto;
 }
 .overlay-para,
 .overlay-btn {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1s;
+}
+
+.overlay-btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.4em;
+  font-size: 0.8rem;
+  transition: 0.25s;
 }
 .html {
   background-color: #e85d25;
@@ -330,6 +481,8 @@ h1 {
   border-top: 2px solid var(--main-blue);
   background-color: var(--main-dark-grey);
   font-family: "Abel", sans-serif;
+  height: 40vh;
+  position: relative;
 }
 .social {
   height: 20vh;
@@ -363,6 +516,8 @@ h1 {
 small {
   color: #d2dae271;
   margin-top: 2em;
+  position: absolute;
+  bottom: 10%;
 }
 small:hover {
   cursor: default;
@@ -370,6 +525,13 @@ small:hover {
 
 #footer i {
   font-size: 1.5rem;
+  margin: 1em;
+  transition: 0.6s;
+}
+
+#footer i:hover,
+#footer i:focus {
+  color: var(--main-red);
 }
 /*
 ---------------------------- MEDIA QUERIES  -----------------------
@@ -386,6 +548,19 @@ small:hover {
   .main-para {
     font-size: 1.3rem;
   }
+  .project-overlay {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .overlay-para {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+  .overlay-btn {
+    padding: 0.5em;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
   h1 {
     font-size: 3rem;
   }
@@ -401,7 +576,12 @@ small:hover {
   .project-title {
     font-size: 1.5rem;
   }
-
+  .graph-label{
+    width: 100px;
+  }
+  .bar{
+    font-size: 16px;
+  }
   #footer i {
     font-size: 2.2rem;
   }
@@ -415,34 +595,44 @@ small:hover {
 
 @media screen and (min-width: 1000px) {
   #about,
-  #projects {
+  #projects,
+  .technologies {
     max-width: 1200px;
     margin: 0 auto;
   }
+
   h1 {
     font-size: 3.5rem;
   }
   h3 {
     font-size: 1.7rem;
   }
+  .headline {
+    margin-bottom: 2em;
+  }
   .main-para {
     font-size: 1.4rem;
     line-height: 2.5rem;
   }
+  .more-btn {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+  .slide:hover,
+  .slide:focus {
+    box-shadow: inset 11em 0 0 0 var(--main-blue);
+  }
   .section-header {
     font-size: 2.8rem;
+  }
+  .technologies{
+    margin: 3em auto;
   }
   .project-title {
     font-size: 2rem;
   }
   .project {
     width: 90%;
-  }
-  /* .project-overlay{
-    height: 49.5%;
-  } */
-  .overlay-para {
-    font-size: 1.3rem;
   }
   .pill {
     border-radius: 15px;
@@ -454,6 +644,7 @@ small:hover {
   #footer i {
     font-size: 3rem;
     padding: 1rem;
+    margin: 0;
   }
   .email h6 {
     font-size: 1.6rem;
@@ -473,19 +664,19 @@ small:hover {
   .navbar-large {
     display: flex;
     align-items: center;
-    padding: 1.3em;
+    padding: 1em;
     width: 100vw;
     justify-content: flex-end;
     list-style: none;
   }
   .nav-item {
     padding-left: 2.2em;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .social-icons {
     margin-bottom: 1.7em;
   }
   #footer {
-    height: 30vh;
+    height: 50vh;
   }
 }
