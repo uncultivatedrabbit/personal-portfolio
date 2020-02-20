@@ -492,7 +492,7 @@ nav a:hover,
   position: relative;
 }
 .social {
-  height: 20vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -504,7 +504,7 @@ nav a:hover,
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
-  margin-top: 2em;
+  margin-top: 5em;
 }
 .footer-icon {
   margin: 0 auto;
@@ -531,7 +531,7 @@ nav a:hover,
   display: none;
 }
 
-/* small {
+small {
   color: #d2dae271;
   margin-top: 2em;
   position: absolute;
@@ -539,13 +539,13 @@ nav a:hover,
 }
 small:hover {
   cursor: default;
-} */
+}
 
 #footer i {
   font-size: 1.5rem;
   padding: 1em;
   transition: 0.6s;
-  color: pink;
+  color: yellow;
 }
 
 #footer i:hover,
