@@ -10,7 +10,6 @@ function rotateArrowAnimation() {
   });
 }
 
-
 // reduces or expanded hamburger menu
 function toggleNavExpansion() {
   $("#menu-toggle").click(function() {
@@ -23,11 +22,11 @@ function toggleNavExpansion() {
     }
   });
 
-  $('.extended-list-item').click(e => {
+  $(".extended-list-item").click(e => {
     $("#navbar").removeClass("expanded");
     $("#navbar").addClass("reduced");
-    $('.hamburger-menu').removeClass('active')
-  })
+    $(".hamburger-menu").removeClass("active");
+  });
 }
 
 // adds active class to large navbar to change the color of each link
@@ -40,23 +39,33 @@ function addActiveClass() {
 }
 
 // make navbar sticky when user scrolls
-// function makeNavbarSticky() {
-//   const navPosition = $("#navbar").offset();
-//   $(window).bind("scroll", function() {
-//     $(window).scrollTop() > navPosition.top
-//       ? $("#navbar").addClass("navbar-sticky")
-//       : $("#navbar").removeClass("navbar-sticky");
-//   });
-// }
+function makeNavbarSticky() {
+  let previousScroll = 0,
+    headerOrgOffset = $("#navbar").offset().top;
+  $(window).scroll(function() {
+    let currentScroll = $(this).scrollTop();
+    if (currentScroll > headerOrgOffset) {
+      if (currentScroll > previousScroll) {
+        $("#navbar").fadeOut();
+      } else {
+        $("#navbar").fadeIn();
+        $("#navbar").addClass("navbar-sticky");
+      }
+    } else {
+      $("#navbar").removeClass("navbar-sticky");
+    }
+    previousScroll = currentScroll;
+  });
+}
 
-
+$(document).ready(function() {});
 
 function loadJavascript() {
   console.log("javascript loaded...");
   rotateArrowAnimation();
   toggleNavExpansion();
   addActiveClass();
-  // makeNavbarSticky();
+  makeNavbarSticky();
 }
 
 $(loadJavascript);
