@@ -488,7 +488,7 @@ nav a:hover,
   border-top: 2px solid var(--main-blue);
   background-color: var(--main-dark-grey);
   font-family: "Abel", sans-serif;
-  height: 50vh;
+  height: 40vh;
   position: relative;
 }
 .social {
@@ -543,7 +543,9 @@ small:hover {
 #footer i {
   font-size: 1.5rem;
   padding: 1em;
+  margin: 1em;
   transition: 0.6s;
+  color: pink;
 }
 
 #footer i:hover,
