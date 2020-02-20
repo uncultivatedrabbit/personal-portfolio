@@ -3,4 +3,5 @@ Final todo
 1) navbar ONLY on scroll up
 2) add back to top button on footer
 3) add quotes and style bio more
+4) fix footer on phones
 
