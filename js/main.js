@@ -40,14 +40,14 @@ function addActiveClass() {
 }
 
 // make navbar sticky when user scrolls
-function makeNavbarSticky() {
-  const navPosition = $("#navbar").offset();
-  $(window).bind("scroll", function() {
-    $(window).scrollTop() > navPosition.top
-      ? $("#navbar").addClass("navbar-sticky")
-      : $("#navbar").removeClass("navbar-sticky");
-  });
-}
+// function makeNavbarSticky() {
+//   const navPosition = $("#navbar").offset();
+//   $(window).bind("scroll", function() {
+//     $(window).scrollTop() > navPosition.top
+//       ? $("#navbar").addClass("navbar-sticky")
+//       : $("#navbar").removeClass("navbar-sticky");
+//   });
+// }
 
 
 
@@ -56,7 +56,7 @@ function loadJavascript() {
   rotateArrowAnimation();
   toggleNavExpansion();
   addActiveClass();
-  makeNavbarSticky();
+  // makeNavbarSticky();
 }
 
 $(loadJavascript);
