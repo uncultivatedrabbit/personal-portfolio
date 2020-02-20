@@ -531,7 +531,7 @@ nav a:hover,
   display: none;
 }
 
-small {
+/* small {
   color: #d2dae271;
   margin-top: 2em;
   position: absolute;
@@ -539,7 +539,7 @@ small {
 }
 small:hover {
   cursor: default;
-}
+} */
 
 #footer i {
   font-size: 1.5rem;
