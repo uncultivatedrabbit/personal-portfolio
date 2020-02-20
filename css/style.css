@@ -48,6 +48,7 @@ a {
 
 .italic-header {
   font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
 }
 
 /*
