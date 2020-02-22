@@ -1,3 +1,27 @@
+/* Table of Contents
+   - - - - - - - - -
+   1) GLOBAL
+   
+   2) LANDING PAGE
+      > slide animations
+      > wobble animations
+
+  3) NAVBAR
+      > hamburger menu
+  
+  4) MAIN
+      > about me
+      > projects
+        - pill styling
+  
+  5) FOOTER
+
+  6) Media queries
+      > min-height 700px
+      > min-height 1000px
+
+   - - - - - - - - -
+
 /*
 ---------------------------- GLOBAL-----------------------
 */
@@ -113,7 +137,7 @@ h1 {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-
+/* ------------------------ slide animation ------------------------------- */
 .slide:hover,
 .slide:focus {
   box-shadow: inset 9em 0 0 0 var(--main-blue);
@@ -135,6 +159,7 @@ h1 {
   cursor: pointer;
 }
 
+/* ----------------------------------- wobble animation ------------------------------ */
 @-webkit-keyframes wobble {
   16.65% {
     -webkit-transform: translateY(8px);
@@ -274,7 +299,7 @@ nav a:hover,
   font-size: 1.2rem;
   line-height: 2.1em;
 }
-
+/* ------------------------ hamburger menu --------------------*/
 .hamburger-menu {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -520,7 +545,7 @@ nav a:hover,
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
+/*------------------------------------- pill styling ----------------------------*/
 .html {
   color: #e85d25;
   border: 1px solid #e85d25;
