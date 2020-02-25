@@ -72,7 +72,6 @@ a {
 
 .italic-header {
   font-family: "Titillium Web", sans-serif;
-  text-transform: uppercase;
 }
 
 /*
@@ -263,8 +262,13 @@ nav a:hover,
   color: var(--main-blue);
 }
 
+
 .reduced {
   height: 60px;
+}
+
+.scroll-reduced{
+  height: 10px;
 }
 
 .expanded {
@@ -349,6 +353,33 @@ nav a:hover,
 ---------------------------- MAIN SECTION -----------------------
 */
 
+.slogan-container{
+  width: 70%;
+  text-align: center;
+  margin: 0 auto 2em auto;
+  max-width: 800px;
+}
+.slogan{
+  margin: 2em auto;
+  font-size: 1.9rem;
+}
+.slogan-break{
+  font-size: 1.5rem;
+  transition: letter-spacing .2s;
+  color: rgba(210, 218, 226, 0.4);
+  display: inline;
+}
+
+.slogan-break:hover{
+  letter-spacing: -2px;
+  color: rgba(245, 59, 87, 0.4)
+}
+
+.slogan-subheader{
+  margin: 2em auto;
+  font-size: 1.3rem;
+}
+
 .section-header {
   margin: 1em 1em 0.2em 1em;
   font-size: 1.8rem;
@@ -373,6 +404,9 @@ nav a:hover,
 
 /* ------------------ ABOUT ME --------------------- */
 
+#about{
+  margin-top: 2em;
+}
 .about-me-img {
   text-align: center;
 }
@@ -496,6 +530,7 @@ nav a:hover,
 .project-subtitle {
   text-align: center;
   margin: 8px 5px 8px 5px;
+  text-transform: uppercase;
 }
 .project-image {
   display: inline-block;
@@ -655,6 +690,17 @@ small:hover {
   color: var(--main-red);
   background-color: var(--main-white);
 }
+
+.back-to-top{
+  position: absolute;
+  top: -30%;
+  right: 0;
+}
+
+#back-to-top-icon{
+  font-size: 20px!important;
+}
+
 /*
 ---------------------------- MEDIA QUERIES  -----------------------
 */
@@ -662,6 +708,12 @@ small:hover {
 @media screen and (min-width: 700px) {
   #navbar {
     display: flex;
+  }
+  .slogan{
+    font-size: 2.5rem;
+  }
+  .slogan-subheader, .slogan-break{
+    font-size: 1.7rem;
   }
   .extended-list-item {
     font-size: 1.3rem;
@@ -746,8 +798,14 @@ small:hover {
     max-width: 1700px;
     margin: 0 auto;
   }
+  .slogan{
+    font-size: 3.1rem;
+  }
+  .slogan-subheader, .slogan-break{
+    font-size: 2rem;
+  }
   .section-header {
-    padding-top: 1em;
+    padding-top: 2em;
   }
   h1 {
     font-size: 3.5rem;

@@ -46,9 +46,9 @@ function makeNavbarSticky() {
     let currentScroll = $(this).scrollTop();
     if (currentScroll > headerOrgOffset) {
       if (currentScroll > previousScroll) {
-        $("#navbar").fadeOut();
+        $("#navbar").addClass('scroll-reduced');
       } else {
-        $("#navbar").fadeIn();
+        $("#navbar").removeClass('scroll-reduced');
         $("#navbar").addClass("navbar-sticky");
       }
     } else {
