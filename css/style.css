@@ -247,7 +247,7 @@ h1 {
   align-items: flex-end;
   width: 100%;
   background: var(--main-dark-grey);
-  border-bottom: 2px solid var(--main-blue);
+  border-bottom: 2px solid rgba(60, 64, 198, 0.8);
   overflow: hidden;
   transition: height 1s;
 }
@@ -262,12 +262,11 @@ nav a:hover,
   color: var(--main-blue);
 }
 
-
 .reduced {
   height: 60px;
 }
 
-.scroll-reduced{
+.scroll-reduced {
   height: 10px;
 }
 
@@ -353,29 +352,29 @@ nav a:hover,
 ---------------------------- MAIN SECTION -----------------------
 */
 
-.slogan-container{
+.slogan-container {
   width: 70%;
   text-align: center;
   margin: 0 auto 2em auto;
   max-width: 800px;
 }
-.slogan{
+.slogan {
   margin: 2em auto;
   font-size: 1.9rem;
 }
-.slogan-break{
+.slogan-break {
   font-size: 1.5rem;
-  transition: letter-spacing .2s;
+  transition: letter-spacing 0.2s;
   color: rgba(210, 218, 226, 0.4);
   display: inline;
 }
 
-.slogan-break:hover{
+.slogan-break:hover {
   letter-spacing: -2px;
-  color: rgba(245, 59, 87, 0.4)
+  color: rgba(245, 59, 87, 0.4);
 }
 
-.slogan-subheader{
+.slogan-subheader {
   margin: 2em auto;
   font-size: 1.3rem;
 }
@@ -404,7 +403,7 @@ nav a:hover,
 
 /* ------------------ ABOUT ME --------------------- */
 
-#about{
+#about {
   margin-top: 2em;
 }
 .about-me-img {
@@ -585,6 +584,11 @@ nav a:hover,
   color: #e85d25;
   border: 1px solid #e85d25;
 }
+
+.three{
+  color: rgb(4, 158, 244);;
+  border: 1px solid rgb(4, 158, 244);;
+}
 .pill {
   background-color: var(--main-dark-grey);
   padding: 3px 7px 3px 7px;
@@ -621,7 +625,7 @@ nav a:hover,
 ---------------------------- FOOTER -----------------------
 */
 #footer {
-  border-top: 2px solid var(--main-blue);
+  border-top: 2px solid rgba(60, 64, 198, 0.8);
   background-color: var(--main-dark-grey);
   font-family: "Abel", sans-serif;
   height: 40vh;
@@ -691,14 +695,14 @@ small:hover {
   background-color: var(--main-white);
 }
 
-.back-to-top{
+.back-to-top {
   position: absolute;
   top: -30%;
   right: 0;
 }
 
-#back-to-top-icon{
-  font-size: 20px!important;
+#back-to-top-icon {
+  font-size: 20px !important;
 }
 
 /*
@@ -709,10 +713,11 @@ small:hover {
   #navbar {
     display: flex;
   }
-  .slogan{
+  .slogan {
     font-size: 2.5rem;
   }
-  .slogan-subheader, .slogan-break{
+  .slogan-subheader,
+  .slogan-break {
     font-size: 1.7rem;
   }
   .extended-list-item {
@@ -798,10 +803,11 @@ small:hover {
     max-width: 1700px;
     margin: 0 auto;
   }
-  .slogan{
+  .slogan {
     font-size: 3.1rem;
   }
-  .slogan-subheader, .slogan-break{
+  .slogan-subheader,
+  .slogan-break {
     font-size: 2rem;
   }
   .section-header {
