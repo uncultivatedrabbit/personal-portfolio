@@ -621,6 +621,15 @@ nav a:hover,
   color: #90a4cb;
   border: 1px solid #90a4cb;
 }
+.chart{
+  color: #FF6384;
+  border: 1px solid #FF6384;
+
+}
+.leaflet{
+  color: rgb(25,153,0);
+  border: 1px solid rgb(25,153,0);
+}
 /*
 ---------------------------- FOOTER -----------------------
 */
