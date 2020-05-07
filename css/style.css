@@ -60,6 +60,7 @@ h6 {
   letter-spacing: 0.2rem;
 }
 
+
 p {
   line-height: 1.8rem;
 }
@@ -74,6 +75,9 @@ a {
   font-family: "Titillium Web", sans-serif;
 }
 
+.red{
+  color: var(--main-red);
+}
 /*
 ---------------------------- LANDING PAGE-----------------------
 */
@@ -109,7 +113,7 @@ header {
   margin: 10px 15px 35px 15px;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 
 .header-break {
@@ -136,6 +140,11 @@ h1 {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
+
+/* .landing-break{
+  display: block;
+  width: 20px;
+} */
 /* ------------------------ slide animation ------------------------------- */
 .slide:hover,
 .slide:focus {
@@ -422,12 +431,11 @@ nav a:hover,
 }
 
 .technologies {
-  width: 60%;
+  width: 100%;
   text-align: center;
   margin-top: 2em;
 }
 .graph-container {
-  width: calc(100% - 40px);
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -480,6 +488,9 @@ nav a:hover,
 }
 .bar90::after {
   max-width: 90%;
+}
+.bar85::after {
+  max-width: 85%;
 }
 .bar80::after {
   max-width: 80%;
@@ -729,6 +740,10 @@ small:hover {
   .slogan-break {
     font-size: 1.7rem;
   }
+  .mobile-break{
+    display: none;
+    width: 0px;
+  }
   .extended-list-item {
     font-size: 1.3rem;
   }
@@ -819,6 +834,7 @@ small:hover {
   .slogan-break {
     font-size: 2rem;
   }
+
   .section-header {
     padding-top: 2em;
   }
