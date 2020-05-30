@@ -606,6 +606,10 @@ nav a:hover,
   border-radius: 10px;
   margin: 2px;
 }
+.express{
+  color: var(--main-white);
+  border: 1px solid var(--main-white);
+}
 .css {
   color: rgb(36, 157, 219);
   border: 1px solid rgb(36, 157, 219);
@@ -616,8 +620,14 @@ nav a:hover,
 }
 .react {
   color: rgb(97, 218, 251);
+  border: 1px solid rgb(97,218,251);
 }
-.react i {
+.mongo{
+  color: #13AA52;
+  border: 1px solid #13AA52;
+
+}
+.fa-react{
   animation: rotation 10s infinite linear;
 }
 .node {
@@ -641,6 +651,8 @@ nav a:hover,
   color: rgb(25,153,0);
   border: 1px solid rgb(25,153,0);
 }
+
+
 /*
 ---------------------------- FOOTER -----------------------
 */
